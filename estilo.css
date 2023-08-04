@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root {
+   --cor-fundo:rgb(34, 0, 224);
+   --cor-fonte: rgb(20, 20, 20);
+   --cor-hover: rgb(41, 146, 245);
+}
+a {
+ text-decoration-color: rgb(145, 98, 138);
+}
+ul{
+    list-style: none;
+}
+.header {
+    background-color: var(--cor-fundo);
+    position: sticky;
+    top: 0;
+    width: 100vw;
+}
+.logo {
+    display: inline-block;
+}
+#logo{
+    height: 16vh;
+    width: 10vw;
+}
+
+.nav{
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    background-color: var(--cor-fundo);
+    overflow: hidden;
+}
+.menu a {
+    display: block;
+    padding: 30px;
+    color: var(--cor-fonte);
+}
+.menu a:hover{
+    background-color: var(--cor-hover);
+}
+.nav {
+    max-height: 0;
+    transition: max-height   .5s ease-out; 
+}
+.hamb {
+    cursor: pointer;
+    float: right;
+    padding: 35px 20px;
+}
+.hamb-line{
+    background-color: var(--cor-fonte);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+.hamb-ling::before,
+.hamb-ling::after{
+    background-color: var(--cor-fonte);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transform: all  .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top:5px;
+}
+.hamb-line::after{
+    top:-5px;
+}
+.side-menu{
+    display: none;
+}
+.rodape{
+    width: 100%;
+    text-align: center;
+}
+@media screen and (min-width: 768px){
+   .menu{
+    height: 100px;
+    background-color: rgb(23, 114, 94);
+    text-align: center;
+    font-size: 35px;
+   }
+}
+@media screen and (min-width: 1280px){
+    .menu{
+        height: 100px;
+        background-color: rgb(22, 33, 95);
+        color: #fff;
+        font-size: 64px;
+        text-align: center;
+       }
+}
